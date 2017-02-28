@@ -1,24 +1,76 @@
-# README
+# Hot Reads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
+- [Onboarding Tips](#onboarding)
+  - [Heroku](#heroku)
+  - [URLockbox](#lockbox)
+- [Requirements](#requirements)
+  - [Ruby on Rails](#ror)
+- [Installation](#installation)
+- [API Endpoints](#api-endpoints)
+- [Gems](#gems)
+- [Maintainer](#maintainer)
+- [Running the Test Suite](#testing)
 
-Things you may want to cover:
+## [Onboarding tips](#onboarding)
+### [Heroku](#heroku)
+* Hot Reads: https://bg-hot-reads.herokuapp.com/
+* URL Lockbox: https://bg-url-lockbox.herokuapp.com/
 
-* Ruby version
+### [URLockbox](#lockbox)
+* URLockbox sends information about read articles to Hot Reads. Hot Reads stores the information and gives you the opportunity to see if your links are on the Hot Reads Top Ten List. No Hot Reads account is necessary to use URLockbox.
 
-* System dependencies
+## [Requirements](#requirements)
+### [Ruby on Rails](#ror)
+```
+RAILS VERSION
+  - 5.0.0.1
 
-* Configuration
+RUBY VERSION
+  - 2.3.0p0
 
-* Database creation
+BUNDLED WITH
+  - 1.13.7
+```
 
-* Database initialization
+## [Installation](#installation)
 
-* How to run the test suite
+To install, clone https://github.com/bradgreen3/hot-reads.git and run the following commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install
+bundle exec rake db:{create,migrate}
+```
 
-* Deployment instructions
+To run development locally, use the command:
+```
+rails server
+```
 
-* ...
+*Hot Reads API endpoints are hardcoded to production urls, but local host urls are commented out*
+
+## [API Endpoints](#api-endpoints)
+
+To receive top ten links from last 24 hours:
+```
+GET 'https://bg-hot-reads.herokuapp.com/api/v1/links'
+```
+
+To create a new link:
+```
+POST 'https://bg-hot-reads.herokuapp.com/api/v1/links/'
+* pass in url in the params
+```
+
+### [Gems](#gems)
+View Gemfile for notable dependencies
+
+## [Maintainer](#maintainer)
+
+* Brad Green - [bradgreen3](https://github.com/bradgreen3)
+
+### [Running The Test Suite](#testing)
+
+```ruby
+rspec
+```

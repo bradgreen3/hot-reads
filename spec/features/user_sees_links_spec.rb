@@ -42,7 +42,3 @@ describe "a user visits the root page" do
     end
   end
 end
-
-# As an unauthenticated user, I can visit the Hot Reads main index page and see a
-# list of the top-10 most-read URLs (not titles or URL/title combos) across all
-# users. Only reads from the last 24 hours should count towards the ranking.

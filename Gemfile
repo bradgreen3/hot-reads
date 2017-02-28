@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rb-readline'
+gem 'coolline'
 
 group :production do
   gem 'rails_12factor', group: :production
@@ -45,6 +47,7 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'pry'
 end
 
 group :development do

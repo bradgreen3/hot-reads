@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'rb-readline'
 gem 'coolline'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :production do
   gem 'rails_12factor', group: :production

@@ -1,5 +1,23 @@
 <h1> Hot Reads! </h1>
+<p> Only displaying links read within the last 24 hours </p>
 
-<% @links.each do |link| %>
-<p> <%= link.url %> </p>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <td>Rank</td>
+      <td>URL</td>
+      <td>Read Count</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% i = 1 %>
+  <% @links.each do |url, count| %>
+    <tr>
+      <td> <%= i %> </td>
+      <td> <%= url %> </td>
+      <td> <%= count %> </td>
+    </tr>
+    <% i += 1 %>
+  <% end %>
+</tbody>
+</table>

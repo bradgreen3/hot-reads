@@ -5,7 +5,7 @@ describe "new link endpoint" do
     it "creates new link" do
 
       headers = {"CONTENT-TYPE" => "application/json"}
-      params = {link: {url: "http://www.google.com"} }.to_json
+      params = {url: "http://www.google.com"}.to_json
 
       post "/api/v1/links", params: params, headers: headers
 
